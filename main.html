@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>8-А Клас</title>
+    </head>
+    <header>
+        <div class="title">
+            <h1>8-А</h1>
+            <p>Клас</p>
+        </div>
+    </header>
+    <body>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="mpage">
+                <a href="main.html">Головна</a>
+            </div>
+            <a href="#"> </a>
+            <a href="#"> </a>
+            <a href="#"> </a>
+            <<div class="list">
+                <a href="#">Розклад:</a>
+            </div>>
+            <a href="monday.html">Понеділок</a>
+            <a href="tuesday.html">Вівторок</a>
+            <a href="wednesday.html">Середа</a>
+            <a href="thursday.html">Четвер</a>
+            <a href="friday.html">П'ятниця</a>
+        </div>
+
+        <div class="btn">
+            <span style="cursor:pointer" onclick="openNav()">&#9776; Меню</span>
+        </div>
+            
+        <div class="Date">
+            <button class="button" style="vertical-align:middle" onclick="send()"><span id="date">Hover </span></button>
+        </div>
+
+        <script>
+            function openNav() {
+              document.getElementById("mySidenav").style.width = "250px";
+              document.getElementById("main").style.marginLeft = "250px";
+            }
+            
+            function closeNav() {
+              document.getElementById("mySidenav").style.width = "0";
+              document.getElementById("main").style.marginLeft= "0";
+            }
+
+            let date = new Date();
+            let day = date.toLocaleString('en-us', {weekday: 'long'});
+
+            if (day == "Sunday") {
+                document.getElementById("date").innerHTML = "Зараз неділя! Які уроки!?";
+            }
+            if (day == "Saturday") {
+                document.getElementById("date").innerHTML = "Зараз субота! Які уроки!?";
+            }
+            if (day == "Friday") {
+                document.getElementById("date").innerHTML = "Розклад уроків на п'ятницю:";
+            }
+            if (day == "Thursday") {
+                document.getElementById("date").innerHTML = "Розклад уроків на четвер:";
+            }
+            if (day == "Wednesday") {
+                document.getElementById("date").innerHTML = "Розклад уроків на середу:";
+            }
+            if (day == "Tuesday") {
+                document.getElementById("date").innerHTML = "Розклад уроків на вівторок:";
+            }
+            if (day == "Monday") {
+                document.getElementById("date").innerHTML = "Розклад уроків на понеділок:";
+            }
+            
+            function send() {
+                if (document.getElementById("date").innerHTML == "Розклад уроків на понеділок:") {
+                    window.location.href = "monday.html"
+                }
+                if (document.getElementById("date").innerHTML == "Розклад уроків на середу:") {
+                    window.location.href = "wednesday.html"
+                }
+                if (document.getElementById("date").innerHTML == "Розклад уроків на п'ятницю:") {
+                    window.location.href = "friday.html"
+                }
+            }
+        
+        </script>
+        
+
+    </body>
+</html>

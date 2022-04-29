@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>8-А Клас - Понеділок</title>
+    </head>
+    <header>
+        <div class="title">
+        </div>
+    </header>
+    <body>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="mpage">
+                <a href="main.html">Головна</a>
+            </div>
+            <a href="#"> </a>
+            <a href="#"> </a>
+            <a href="#"> </a>
+            <div class="list">
+                <a href="#">Розклад:</a>
+            </div>
+            <a href="monday.html">Понеділок</a>
+            <a href="tuesday.html">Вівторок</a>
+            <a href="wednesday.html">Середа</a>
+            <a href="thursday.html">Четвер</a>
+            <a href="friday.html">П'ятниця</a>
+        </div>
+
+        <div class="btn">
+            <span style="cursor:pointer" onclick="openNav()">&#9776; Меню</span>
+        </div>
+            
+        <div class="lessons">
+            <p>Розклад:</p>
+            <a href="https://us04web.zoom.us/j/2476862966?pwd=aUcrRjgxa09ZRUFFZm5DR0VGVnFrZz09">1. Фізика: 8:00 - 8:45</a>
+            <a href="https://us04web.zoom.us/j/9729670908?pwd=K1RYSTFGMFdhQ3l3RFpya3gxUjBSUT09">2. Алгебра: 8:55 - 9:40</a>
+            <a href="https://us04web.zoom.us/j/4755564698?pwd=SzYwWWYxaEd6bWFJTWNPSE1DSXBjZz09">3. Географія: 9:50 - 10:35</a>
+            <a href="https://us05web.zoom.us/j/9368768027?pwd=WjVzVk9lOWJHRG5yNlN2eDRjWWh3Zz09">4. Зарубіжна література: 10:55 - 11:40</a>
+            <a href="https://us02web.zoom.us/j/89607711206?pwd=cW4raUQwNDRuMzQrTlVJdDJxeEZq">5. Українська література: 11:50 - 12:35</a>
+            <a href="https://us04web.zoom.us/j/9729670908?pwd=K1RYSTFGMFdhQ3l3RFpya3gxUjBSUT09">6. Алгебра: 12:55 - 13:40</a>
+        </div>
+        
+        <script>
+            function openNav() {
+              document.getElementById("mySidenav").style.width = "250px";
+              document.getElementById("main").style.marginLeft = "250px";
+            }
+            
+            function closeNav() {
+              document.getElementById("mySidenav").style.width = "0";
+              document.getElementById("main").style.marginLeft= "0";
+            }
+        </script>
+
+    </body>
+</html>
